@@ -2,7 +2,7 @@
 
 
 
-| Fichier | Résumé des changements (version simple) |
+| Fichier | Résumé des changements |
 |---------|----------------------------------------|
 | `inc_co/connect.php` | On détecte correctement si la page est en **http** ou **https**, et on compare les adresses de même façon. Ça évite des messages d’erreur PHP 8 et des redirections ou blocages inexpliqués. |
 | `envoi_mail/PHPMailerAutoload.php` | Ancienne méthode de chargement automatique retirée : **PHP 8 ne l’autorise plus**. Remplacée par la méthode moderne recommandée. |
@@ -45,7 +45,7 @@
 
 ## Historique
 
-| Date | Fichier | Note (simple) |
+| Date | Fichier | Note |
 |------|---------|---------------|
 | 2026-05-02 | `MODIF.MD` | Création du journal ; première fiche : connexion / URLs. |
 | 2026-05-02 | `footer.php`, `graph_intervention.php`, `accueil.php` | Graphique accueil : script remis au bon endroit, données fiabilisées. |
