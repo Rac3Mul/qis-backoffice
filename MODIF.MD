@@ -19,7 +19,7 @@
 | `pret_materiel.php` | Caution et date de retour : le formulaire **ne suppose plus** que les champs existent toujours ; affichage sécurisé. |
 | `pret_modif.php` | Si le type de matériel n’existe plus en base, les libellés restent **vides** au lieu de provoquer des alertes PHP. |
 | `etat_atelier.php` | Quand une ligne base est **manquante** (intervenant, client, etc.), on affiche des valeurs par défaut au lieu de planter. Liens « PC Quick Info Bordeaux » **masqués** dans l’en-tête. |
-| `stats_antivirus.php` | Page **beaucoup plus rapide** : au lieu de refaire énormément de petites requêtes, le calcul se fait en **une fois** avec regroupement en base (même résultat, chargement allégé). |
+| `stats_antivirus.php` | Page **beaucoup plus rapide** : une seule requête avec regroupement en base au lieu d’énormément de petites requêtes. **Affichage** : bloc **Quick Info Bordeaux** retiré — seule l’agence **Quick Info System** est listée ; requête limitée à `id_agence = 1`, tableau en **pleine largeur** (`col-xs-12`). |
 | `ajout_hebergement.php` | Ouverture **sans client** dans l’URL : plus de messages parasites. Formulaire **ajout** : après une erreur de saisie, les choix (tarifs, serveur, etc.) **restent visibles** comme avant envoi. |
 | `ajout_domaine.php` | Même logique : **PHP 8** plus calme, formulaire qui **garde les valeurs** après erreur, contrôles renforcés (intervenant, doublon de nom de domaine, etc.). |
 | `hebergement_modif.php` | Au **premier chargement** de la page, plus de message PHP bizarre : la variable d’affichage des messages est toujours définie. |
@@ -82,3 +82,4 @@
 | 2026-05-10 | `action/{mail_tache,gestion_heb,gestion_dom,gestion_antivirus}.php`, `design/script_mail*.php`, `test_phpmailer_smtp.php` | Tous ces fichiers branchés sur PHPMailer 7 ; contrôle global OK. |
 | 2026-05-10 | `ajout_cat.php`, `MODIF.MD` | Liste couleurs sans avertissements. |
 | 2026-05-10 | `list_liaisons_clients.php`, `MODIF.MD` | Liste liaisons : lignes manquantes gérées ; suppression plus sûre. |
+| 2026-05-11 | `stats_antivirus.php`, `MODIF.MD` | Statistiques antivirus : plus d’affichage pour Quick Info Bordeaux ; uniquement Quick Info System (SQL + mise en page pleine largeur). |
