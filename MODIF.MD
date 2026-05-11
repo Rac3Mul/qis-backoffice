@@ -1,4 +1,4 @@
-# Migration PHP 7 → 8.2 — journal des modifications
+# Migration PHP 7 → 8.2+ — journal des modifications
 
 
 
